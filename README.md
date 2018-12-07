@@ -1,2 +1,2 @@
 # Gla-c-prgramming
-Programs that need to be understand properly.
+~This repository  is about the c programs to which i have gone through. 
