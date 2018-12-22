@@ -10,8 +10,7 @@ int main() {
     printf(" Ascii character set\n");
     while(a<128)
       printf("%d = %c\n",a++,a);
-    
-	return 0;
+    return 0;
 }
 ```
 
