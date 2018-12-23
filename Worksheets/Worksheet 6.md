@@ -38,3 +38,7 @@ void cube(double x)
 }
 
 ```
+
+3. Write a program in C to convert a given number of days into years, weeks and days.
+
+```C
