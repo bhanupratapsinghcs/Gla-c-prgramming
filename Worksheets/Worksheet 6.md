@@ -42,3 +42,22 @@ void cube(double x)
 3. Write a program in C to convert a given number of days into years, weeks and days.
 
 ```C
+
+#include <stdio.h>
+
+int main()
+{
+	unsigned int given_days,days,week,year;
+	
+	printf("Enter the number of days :\n");
+	
+	scanf("%u",&given_days);
+	
+	year = (given_days/ 365);
+	week = (given_days % 365)/7;
+	days = (given_days%365)%7;
+	
+	printf("Year = %d week = %d day = %d",year,week,days);
+	return 0;
+}
+```
