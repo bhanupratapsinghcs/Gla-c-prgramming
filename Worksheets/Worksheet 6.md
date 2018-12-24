@@ -61,3 +61,63 @@ int main()
 	return 0;
 }
 ```
+
+4. An electricity board charges according to following rates:
+
+   For the first 100 units - 40 P per unit,
+
+   For the next 200 units - 50 P per unit,
+
+   Beyond 300 units - 60 P per unit.
+
+   All users are charged a meter charge too, which is Rs 50/-
+
+   Write a program in C to read the names of users and number of units consumed, and print out the charges with names.
+   
+ ```c  
+#include <stdio.h> 
+#include <string.h>
+#define MAX 25 
+int main() 
+{ 
+    char name[MAX]; 
+    float bill_amount;
+  
+    printf("Enter your Name: \n"); 
+    fgets(name,MAX,stdin); 
+    printf("Enter the number unit used :");
+    scanf("%f",&bill_amount);
+    if(bill_amount<=100)
+        printf("%s have to %.2f P",name,(bill_amount*40)+50);
+    else if(bill_amount<=200)
+         printf("\n%s have to %.2f P",name,(bill_amount*50)+50);
+    else if(bill_amount>300)
+         printf("\n%s have to %.2f P",name,(bill_amount*60)+50);
+  
+    return 0; 
+} 
+```
+
+5. Write a program in C to read a number `x` and print ![](https://latex.codecogs.com/gif.latex?$$x^2,x^3,x^4,x^5$$)
+
+```c
+#include <stdio.h>
+#include<math.h>
+
+int main() 
+{
+    double num;
+    
+    printf("Enter a Number :\n");
+    
+    scanf("%lf",&num);
+    
+    printf("\n %.2lf\n %.2lf\n %.2lf\n %.2lf",pow(num,2),pow(num,3),pow(num,4),pow(num,5));
+    
+	return 0;
+}
+```
+
+6. Write a program in C to accept three digits (i.e 0-9) and print all possible combinations from these digits. (for example, if the        three digits are 1, 2 and 3, then all possible values are 123, 132, 231, 213, 312 and 321)
+
+```c
