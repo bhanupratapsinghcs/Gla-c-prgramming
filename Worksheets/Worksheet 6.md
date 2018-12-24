@@ -121,3 +121,38 @@ int main()
 6. Write a program in C to accept three digits (i.e 0-9) and print all possible combinations from these digits. (for example, if the        three digits are 1, 2 and 3, then all possible values are 123, 132, 231, 213, 312 and 321)
 
 ```c
+
+
+```
+
+7. Write a program in C to read coordinates of two points and calculate the distance between them as per following formula:
+
+   ![](https://latex.codecogs.com/gif.latex?$d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$)
+   
+```c
+#include <stdio.h>
+#include<math.h>
+
+int main() 
+{
+	float x1,x2,y1,y2,distance;
+	printf("Enter the x coordinates of first point :\n");
+	scanf("%f",&x1);
+    printf("Enter the y coordinates of first point :\n");
+	scanf("%f",&y1);
+	printf("Enter the x coordinates of second point :\n");
+	scanf("%f",&x2);
+	printf("Enter the y coordinates of second point :\n");
+	scanf("%f",&y2);
+	distance = sqrt(pow(x1 - x2,2)+pow(y1 - y2,2));
+	printf("distance between two point is %f",distance);
+	
+	return 0;
+}
+```
+
+8. Write a program in C to find the numbers when their sum (S) and product (P) is known. **Hint**: Use the quadratic equation
+
+   ![](https://latex.codecogs.com/gif.latex?$x^2-Sx+P$)
+   
+```c   
