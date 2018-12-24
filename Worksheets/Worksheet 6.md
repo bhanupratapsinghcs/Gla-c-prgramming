@@ -204,7 +204,8 @@ int main()
         case '/' : printf("%lf",num1 / num2);
                     break;
         default : printf("Enter the correct opertaor.");   
-    }    
+    } 
+    // it can also be used.
     /*if(oprtr=='+')
         printf("%lf",num1 + num2);
     else if(oprtr=='-')
@@ -219,3 +220,22 @@ int main()
     
 	return 0;
 }
+
+10. Write a program in C to calculate the factorial of an integer.
+
+```c
+
+#include<stdio.h>
+
+int main()
+{
+	int num,product =1;
+	printf("Enter the Number :\n");
+	scanf("%d",&num);
+	for(int i=1;i<=num;i++)
+	{
+		product *=i;
+	}
+	printf("Factorial of number %d is %d",num,product);
+	return 0;
+}	
