@@ -145,7 +145,7 @@ int main()
 	printf("Enter the y coordinates of second point :\n");
 	scanf("%f",&y2);
 	distance = sqrt(pow(x1 - x2,2)+pow(y1 - y2,2));
-	printf("distance between two point is %f",distance);
+	printf("Distance between two point is %.2f",distance);
 	
 	return 0;
 }
@@ -156,3 +156,66 @@ int main()
    ![](https://latex.codecogs.com/gif.latex?$x^2-Sx+P$)
    
 ```c   
+
+#include <stdio.h>
+#include <math.h>
+
+int main() 
+{
+	float sum ,prod, diff,num1,num2;
+	
+	printf("Enter the Sum and Product :\n");
+	
+	scanf("%f %f",&sum,&prod);
+	
+	diff =sqrt(pow(sum,2)-(4*prod));
+	
+	num1 = (sum+diff)/2;
+	
+	num2 = sum-num1;
+	
+	printf("\nNumber are %.2f %.2f",num1,num2);
+	
+	return 0;
+}
+```
+
+9. Write a program in C to create the equivalent of a four-function calculator. The program requires the user to enter two number and an    operator. It then carries out the specified arithmetic operation : addition, subtraction, multiplication or division of the two          numbers. Finally, it displays the result.
+
+```c
+#include <stdio.h>
+
+int main() 
+{
+    double num1 , num2;
+    char oprtr;
+    printf("Enter the two numder :\n");
+    scanf("%lf %c %lf",&num1,&oprtr ,&num2);
+   // printf("Enter the operator(+,-,*,/):\n"); Don't know why it is not workking.
+   // scanf("%[^\n]c",&oprtr);
+    switch(oprtr)
+    {
+        case '+' : printf("%lf",num1 + num2);
+                    break;
+        case '-' : printf("%lf",num1 - num2);
+                    break;
+        case '*' : printf("%lf",num1 * num2);
+                    break;                    
+        case '/' : printf("%lf",num1 / num2);
+                    break;
+        default : printf("Enter the correct opertaor.");   
+    }    
+    /*if(oprtr=='+')
+        printf("%lf",num1 + num2);
+    else if(oprtr=='-')
+        printf("%lf",num1 - num2);
+    else if(oprtr=='*')
+        printf("%lf",num1 * num2);
+    else if(oprtr=='/')
+        printf("%lf",num1 / num2);
+    else
+        printf("Enter the correct opertaor.");*/
+        
+    
+	return 0;
+}
