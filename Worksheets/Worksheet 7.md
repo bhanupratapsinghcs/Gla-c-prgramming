@@ -128,3 +128,103 @@ int main()
 	return 0;
 		
 }
+```
+6. Write a program in C to check if a string is palindrome or not.
+
+```c
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	int check,i = 0;
+	char str[50],str2[50];
+	printf("Enter the string:\n");
+	gets(str);
+	while(str[i]!='\0')
+	{
+		str2[i]=str[strlen(str)-(i+1)];
+		i++;
+	}
+	//puts(str2);		
+	check = strcmp(str,str2);
+	if (check==0)
+		printf("String is a palindrome. ");
+	else
+		printf("String is not a palindrome. ");
+	return 0;
+}
+```
+7. Write a program in C to read the sales of 5 salesmen in 12 months and print the total sales made by each salesman.
+
+```c
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	int check,i = 0;
+	char str[50],str2[50];
+	printf("Enter the string:\n");
+	gets(str);
+	while(str[i]!='\0')
+	{
+		str2[i]=str[strlen(str)-(i+1)];
+		i++;
+	}
+	//puts(str2);		
+	check = strcmp(str,str2);
+	if (check==0)
+		printf("String is a palindrome. ");
+	else
+		printf("String is not a palindrome. ");
+	return 0;
+}
+```
+8. Write a program in C to illustrate working of call-by-value and call by value in a function.
+
+```c
+#include <stdio.h>
+void call_by_value(int x, int y);
+void call_by_ref(int *x,int *y);
+
+int main()
+{
+		
+	int x = 10, y = 20;
+ 
+    printf("Initial value of x = %d\n", x);
+    printf("Initial value of y = %d\n", y);
+ 
+    printf("\nCalling the function\n");
+ 
+   call_by_value(x, y);
+ 
+    printf("\nValues after function call by value \n");
+ 
+    printf("Final value of x = %d\n", x);
+    printf("Final value of y = %d\n", y);
+    
+    call_by_ref(&x,&y);
+    
+    printf("\nValues after function call by reference \n");
+    
+	printf("Final value of x = %d\n", x);
+    printf("Final value of y = %d\n", y);
+    
+}
+void call_by_value(int x, int y)
+{
+    x = x + 10;
+    y = y + 10;
+ 
+    printf("\nValue of x (inside function) = %d\n", x);
+    printf("Value of y (inside function) = %d\n", y);
+}
+void call_by_ref(int *x,int *y)
+{
+	*x = *x + 10;
+    *y = *y + 10;
+ 
+    printf("\nValue of x (inside function) = %d\n", *x);
+    printf("Value of y (inside function) = %d\n", *y);
+}
+```
