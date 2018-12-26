@@ -228,3 +228,36 @@ void call_by_ref(int *x,int *y)
     printf("Value of y (inside function) = %d\n", *y);
 }
 ```
+10. Write a program in C to print the largest number in an array (using a function).
+
+```c
+#include <stdio.h>
+
+int largest_number(int *arr);
+
+int main()
+{
+	int arr[10],i;
+	printf("Enter 10 Numbers to find the greatest:\n");
+	for( i = 0;i < 10; i++)
+		scanf("%d",&arr[i]);
+	
+	printf("Largest number is %d",largest_number(arr));
+	return 0;	
+}
+
+int largest_number(int *arr)
+{
+	int max,j = 0;
+	max = *arr;
+	
+	while( j < 10 )
+	{
+		if(*(arr+j)>=max)
+		{
+			max = *(arr+j);
+		}	
+		j++;	
+	}
+	return max ;		
+}
