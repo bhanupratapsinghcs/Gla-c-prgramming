@@ -7,24 +7,25 @@
 #include <stdio.h>
 #include <math.h>
 
-float SumNum(int x , int N);
+float SumNum(double x , int N);
  
 int main()
 
 {
-	int x, N;
+	int N;
+	double x;
  	
  	printf("Enter the value of x and N to get the sum ;\n");
- 	scanf("%d%d",&x ,&N);
+ 	scanf("%lf%d",&x ,&N);
  	
  	printf("\nSum of series is %.2f",SumNum(x,N));
  	
  	return 0;
  	
 }
-float SumNum(int x,int N)
+float SumNum(double x,int N)
 {
-	float sum = 1;
+	float sum = 1; 
 	int i=2;
 	while(i<=N)
 	{
