@@ -394,3 +394,35 @@ int factorial(int m)
 ```
 
 10.  Raising a number `n` to a power `p` is the same as multiplying the `n` by itself `p` times. Write a function caller **power** that takes two arguments, a double value for `n` and int value for `p`, and returns the result as a double value. Use default argument of 2 for `p`, so that if this argument is omitted that number will be squared. Write the main function that gets value from the user to test power function.
+```c
+
+#include <stdio.h>
+#include <math.h>
+double power( double x ,int y);
+int main()
+{
+	int p = 2;
+	double n;
+	printf("Enter the value of n:\n");
+	scanf("%lf",&n);
+	
+	printf("Enter the value of p:\n");
+	scanf("%d",&p);
+	
+	printf("Value of n after power function %.0lf",power(n,p));
+	
+	return 0;
+	
+}
+double power(double x ,int y)
+{
+	int temp ,i = 1;
+	temp = x;
+	while(i<y)
+	{
+		x *=temp;
+		i++;
+	}
+	return x;
+}
+```
