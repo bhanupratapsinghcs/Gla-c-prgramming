@@ -2,6 +2,33 @@
 
 1. Write a function in C called **zero_small()** that has two integer arguments being passed by reference and sets the smaller of the two number to 0. Write the main program to access this function.
 
+```c
+#include <stdio.h>
+
+void zero_small(int *, int *);
+
+int main()
+{
+	int num1 , num2;
+	printf("Enter the integer value :");
+	scanf("%d %d",&num1,&num2);
+	zero_small(&num1,&num2);
+	if(num1==0)
+		printf("%d is greater",num2);
+	else
+		printf("%d is greater",num1);
+	
+	return 0;
+}
+void zero_small(int *x, int *y)
+{
+	if(*x<*y)
+		*x=0;
+	else
+		*y=0;
+}
+```
+
 2. Write a program in C to determine all Pythagorean triplets in the range 100 to 1000.
 
    A Pythagorean triplet is a set of three integers *i*, *j* and *k* such that
